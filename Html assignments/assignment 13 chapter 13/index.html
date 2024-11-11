@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        section {
+            width: 90%;
+            height: auto;
+            background-color: gainsboro;
+            display: flex;
+            flex-wrap: wrap; /* Allow cards to wrap */
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch; /* Makes all cards the same height */
+            padding: 20px; /* Add some padding around the section */
+        }
+
+        .card1 {
+            width: 25%; /* Default width for larger screens */
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 450px; /* Ensures all cards have a minimum height */
+            overflow: hidden; /* Ensures no overflow when zooming */
+            animation: fadeIn 0.5s ease; /* Animation on load */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card1 img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transition: transform 0.3s ease; /* Transition for zoom effect */
+        }
+
+        .card1 img:hover {
+            transform: scale(1.1); /* Scale image on hover */
+        }
+
+        .card-content {
+            padding: 15px;
+            flex-grow: 1; /* Allows the content to take available space */
+        }
+
+        .card-content h3 {
+            margin: 10px 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .btn {
+            background-color: #ff9900;
+            color: white;
+            padding: 20px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 15px auto 0; /* Use auto for left and right margins to center it */
+            width: 80%; /* Set the width to 80% of the card or any desired value */
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .btn:hover {
+            background-color: #cc7a00; /* Darker shade on hover */
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 1200px) {
+            .card1 {
+                width: 30%; /* Adjust for medium screens */
+            }
+        }
+
+        @media (max-width: 900px) {
+            .card1 {
+                width: 45%; /* Adjust for small screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card1 {
+                width: 90%; /* Full width for mobile screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="card1">
+            <img src="burger.jfif" alt="Burger Image">
+            <div class="card-content">
+                <h3>Delicious Burger</h3>
+                <p>Indulge in our mouth-watering burger, made with fresh ingredients and a juicy patty, topped with crispy lettuce, tomatoes, and a special sauce.</p>
+            </div>
+            <button class="btn">Order Now</button>
+        </div>
+        <div class="card1">
+            <img src="pic.jfif" alt="Chicken Broast">
+            <div class="card-content">
+                <h3>Juicy Chicken Broast</h3>
+                <p>Indulge in our mouth-watering broast, made with fresh ingredients and a juicy patty, topped with crispy lettuce, tomatoes, and a special sauce.</p>
+            </div>
+            <button class="btn">Order Now</button>
+        </div>
+        <div class="card1">
+            <img src="pic2.jfif" alt="Spicy Chicken Burger">
+            <div class="card-content">
+                <h3>Tikha Chicken</h3>
+                <p>Ready to spice things up? Our Spicy Chicken Burger brings the heat with crispy chicken, fiery green chilies, and bold spices. Every bite is packed with flavor that will set your taste buds on fire!</p>
+            </div>
+            <button class="btn">Order Now</button>
+        </div>
+    </section>
+</body>
+
+</html>
